@@ -77,8 +77,11 @@ def fetch_klines(symbol: str, interval: str, limit: int) -> list[dict]:
 # ──────────────────────────────────────────────────────────────────────────────
 
 def load_history() -> dict:
-    """Load ta_history.json. Returns empty dict if file missing or unreadable."""
+    """Load ta_history.json. Returns empty dict if file missing or empty."""
     if not os.path.exists(HISTORY_PATH):
+        return {}
+    # NEW: handle empty file case
+    if os.path.getsize(HISTORY_PATH) == 0:
         return {}
     try:
         with open(HISTORY_PATH, "r", encoding="utf-8") as f:
@@ -87,7 +90,6 @@ def load_history() -> dict:
             raise RuntimeError("ta_history.json root must be a dict")
         return data
     except json.JSONDecodeError as e:
-        # Hard-fail: corrupt history is recoverable from git, not from silent reset.
         raise RuntimeError(f"ta_history.json is corrupt: {e}")
 
 
