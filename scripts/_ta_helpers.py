@@ -17,7 +17,7 @@ import pandas as pd
 import pandas_ta as ta
 import requests
 
-BINANCE_KLINES_URL = "https://api.binance.com/api/v3/klines"
+BINANCE_KLINES_URL = "https://data-api.binance.com/api/v3/klines"
 HISTORY_PATH = "data/ta_history.json"
 SNAPSHOTS_PATH = "data/ta_snapshots.json"
 
