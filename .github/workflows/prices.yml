@@ -7,9 +7,6 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: prices
-  cancel-in-progress: false
 
 jobs:
   fetch:
