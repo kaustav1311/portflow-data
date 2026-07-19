@@ -1,0 +1,15 @@
+{
+  "name": "takame-ta-pipeline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "RSI/EMA/ATR state-machine TA pipeline — computes ta_snapshots.json from an admin-curated token universe (Supabase) + Binance candles. Portable: drop this folder into any repo.",
+  "scripts": {
+    "start": "tsx ta_pipeline.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

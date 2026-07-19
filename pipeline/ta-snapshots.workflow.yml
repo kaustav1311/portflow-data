@@ -1,0 +1,47 @@
+# Copy this file to  .github/workflows/ta-snapshots.yml  in the repo that hosts the pipeline.
+name: TA Snapshots (RSI pipeline)
+
+on:
+  schedule:
+    - cron: '7 * * * *'      # hourly at :07
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ta-snapshots
+  cancel-in-progress: true
+
+jobs:
+  build-snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install pipeline deps
+        working-directory: pipeline
+        run: npm install
+
+      - name: Compute TA snapshot
+        working-directory: pipeline
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          TA_OUT: ../ta_snapshots.json      # publish at repo root for a shared-data repo
+        run: npm start
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name  "takame-ta-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if ! git diff --quiet -- ta_snapshots.json; then
+            git add ta_snapshots.json
+            git commit -m "chore(ta): refresh RSI snapshot [skip ci]"
+            git push
+          else
+            echo "No snapshot change."
+          fi
