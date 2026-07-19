@@ -1,0 +1,1143 @@
+{
+  "generated_at": "2026-07-19T15:42:14.284Z",
+  "source": "binance-klines",
+  "timeframes": [
+    "15m",
+    "1h",
+    "4h",
+    "1d",
+    "1w"
+  ],
+  "zones": {
+    "1w": {
+      "low": 40,
+      "high": 60,
+      "deepLow": 30,
+      "deepHigh": 70,
+      "sustain": 2
+    },
+    "1d": {
+      "low": 36,
+      "high": 64,
+      "deepLow": 25,
+      "deepHigh": 75,
+      "sustain": 3
+    },
+    "4h": {
+      "low": 33,
+      "high": 67,
+      "deepLow": 22,
+      "deepHigh": 78,
+      "sustain": 3
+    },
+    "1h": {
+      "low": 30,
+      "high": 70,
+      "deepLow": 20,
+      "deepHigh": 80,
+      "sustain": 4
+    },
+    "15m": {
+      "low": 25,
+      "high": 75,
+      "deepLow": 18,
+      "deepHigh": 82,
+      "sustain": 4
+    }
+  },
+  "token_count": 13,
+  "tokens": [
+    {
+      "coin_id": "tagger",
+      "symbol": "TAG",
+      "name": "TAGGER",
+      "image": "https://coin-images.coingecko.com/coins/images/53206/large/IMG_3196.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "bitcoin",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "ethereum",
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "image": "https://assets.coingecko.com/coins/images/279/small/ethereum.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "solana",
+      "symbol": "SOL",
+      "name": "Solana",
+      "image": "https://assets.coingecko.com/coins/images/4128/small/solana.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "binancecoin",
+      "symbol": "BNB",
+      "name": "BNB",
+      "image": "https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "ripple",
+      "symbol": "XRP",
+      "name": "XRP",
+      "image": "https://assets.coingecko.com/coins/images/44/small/xrp-symbol-white-128.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "cardano",
+      "symbol": "ADA",
+      "name": "Cardano",
+      "image": "https://assets.coingecko.com/coins/images/975/small/cardano.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "dogecoin",
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "image": "https://assets.coingecko.com/coins/images/5/small/dogecoin.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "chainlink",
+      "symbol": "LINK",
+      "name": "Chainlink",
+      "image": "https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "avalanche-2",
+      "symbol": "AVAX",
+      "name": "Avalanche",
+      "image": "https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "polkadot",
+      "symbol": "DOT",
+      "name": "Polkadot",
+      "image": "https://assets.coingecko.com/coins/images/12171/small/polkadot.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "litecoin",
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "image": "https://assets.coingecko.com/coins/images/2/small/litecoin.png",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    },
+    {
+      "coin_id": "uniswap",
+      "symbol": "UNI",
+      "name": "Uniswap",
+      "image": "https://assets.coingecko.com/coins/images/12504/small/uni.jpg",
+      "price": null,
+      "supported": false,
+      "ta": {
+        "15m": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "4h": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1d": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        },
+        "1w": {
+          "rsi": null,
+          "rsi_prev1": null,
+          "rsi_prev2": null,
+          "rsi_direction": null,
+          "ema_stack": null,
+          "atr": null,
+          "atr_pct": null,
+          "vol_ratio": null,
+          "state": "UNSUPPORTED",
+          "computed_at": "2026-07-19T15:42:14.284Z"
+        }
+      },
+      "badges": {
+        "macro": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        },
+        "tactical": {
+          "badge_name": "NEUTRAL",
+          "father_state": "UNSUPPORTED",
+          "son_state": "UNSUPPORTED",
+          "failed_attempts": 0
+        }
+      }
+    }
+  ]
+}
