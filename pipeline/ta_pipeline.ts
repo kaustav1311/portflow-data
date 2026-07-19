@@ -2,15 +2,21 @@
  * Takame TA / RSI pipeline — master-plan Layer 1 (admin-only by construction).
  *
  * Reads the admin-curated token universe from Supabase (`ta_universe`, public-read),
- * pulls real OHLCV candles from Binance (keyless, exact 1h/4h/1d/1w intervals),
- * computes RSI(Wilder-14) / EMA-stack / ATR / volume-ratio per timeframe, walks the
- * RSI zone state machine (9 states) and derives the Macro (Weekly×Daily) + Tactical
- * (Daily×1H) badges (10 badges) exactly per Plan_RSI System.txt, then writes
+ * pulls real OHLCV candles from Bybit's public spot API (keyless, exact 1h/4h/1d/1w
+ * intervals), computes RSI(Wilder-14) / EMA-stack / ATR / volume-ratio per timeframe,
+ * walks the RSI zone state machine (9 states) and derives the Macro (Weekly×Daily) +
+ * Tactical (Daily×1H) badges (10 badges) exactly per Plan_RSI System.txt, then writes
  * `public/data/ta_snapshots.json`.
  *
  * NO fabricated data — every number is computed from real candles. Tokens without a
- * Binance USDT pair (or with too little history) are emitted with null/UNSUPPORTED
+ * Bybit spot pair (or with too little history) are emitted with null/UNSUPPORTED
  * fields, never invented values.
+ *
+ * Candle source is Bybit, not Binance: Binance's klines endpoint geo-blocks
+ * GitHub Actions' hosted-runner IP ranges (confirmed 2026-07-19 — the identical
+ * fetch succeeds from a normal machine/browser but returns nothing from CI, which
+ * is why every token showed UNSUPPORTED despite the pipeline "succeeding"). Bybit's
+ * public market-data API does not apply that block.
  *
  * Run locally:  SUPABASE_URL=.. SUPABASE_ANON_KEY=.. npx tsx pipeline/ta_pipeline.ts
  * In CI: see .github/workflows/ta-snapshots.yml
@@ -27,11 +33,12 @@ const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL |
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || '';
 const OUT_PATH = process.env.TA_OUT || 'public/data/ta_snapshots.json';
 
-const BINANCE = 'https://api.binance.com/api/v3/klines';
+const BYBIT = 'https://api.bybit.com/v5/market/kline';
 
 type TF = '15m' | '1h' | '4h' | '1d' | '1w';
 const TFS: TF[] = ['15m', '1h', '4h', '1d', '1w'];
-const BINANCE_INTERVAL: Record<TF, string> = { '15m': '15m', '1h': '1h', '4h': '4h', '1d': '1d', '1w': '1w' };
+// Bybit's interval strings: minutes as bare numbers, D/W for day/week.
+const BYBIT_INTERVAL: Record<TF, string> = { '15m': '15', '1h': '60', '4h': '240', '1d': 'D', '1w': 'W' };
 
 // Zone thresholds per Plan_RSI System.txt (Weekly/Daily/1H are the spec's badge pairs).
 // 4h/15m are shown for context and tightened as the timeframe shortens (more noise).
@@ -223,12 +230,16 @@ async function loadUniverse(): Promise<UniverseToken[]> {
 interface Candle { high: number; low: number; close: number; volume: number; }
 
 async function fetchKlines(symbol: string, tf: TF, limit = 220): Promise<Candle[] | null> {
-  const url = `${BINANCE}?symbol=${symbol}USDT&interval=${BINANCE_INTERVAL[tf]}&limit=${limit}`;
+  const url = `${BYBIT}?category=spot&symbol=${symbol}USDT&interval=${BYBIT_INTERVAL[tf]}&limit=${limit}`;
   try {
     const res = await fetch(url);
     if (!res.ok) return null;
-    const raw = (await res.json()) as unknown[][];
-    return raw.map((k) => ({ high: +k[2], low: +k[3], close: +k[4], volume: +k[5] }));
+    const json = (await res.json()) as { retCode: number; result?: { list: string[][] } };
+    if (json.retCode !== 0 || !json.result?.list?.length) return null;
+    // Bybit returns newest-first; every downstream calc (RSI series, EMA, ATR) walks
+    // the array assuming oldest→newest, same as the old Binance response shape did.
+    const rows = [...json.result.list].reverse();
+    return rows.map((k) => ({ high: +k[2], low: +k[3], close: +k[4], volume: +k[5] }));
   } catch {
     return null;
   }
@@ -283,7 +294,7 @@ async function main() {
     const perTf: Record<string, Candle[] | null> = {};
     for (const tf of TFS) {
       perTf[tf] = await fetchKlines(sym, tf);
-      await new Promise((r) => setTimeout(r, 120)); // gentle on Binance
+      await new Promise((r) => setTimeout(r, 120)); // gentle on Bybit
     }
     const ta: Record<string, ReturnType<typeof analyseTF>> = {};
     for (const tf of TFS) ta[tf] = analyseTF(perTf[tf], tf, computedAt);
@@ -313,7 +324,7 @@ async function main() {
 
   const payload = {
     generated_at: computedAt,
-    source: 'binance-klines',
+    source: 'bybit-klines',
     timeframes: TFS,
     zones: ZONES,
     token_count: tokens.length,
