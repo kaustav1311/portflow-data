@@ -2,21 +2,31 @@
  * Takame TA / RSI pipeline — master-plan Layer 1 (admin-only by construction).
  *
  * Reads the admin-curated token universe from Supabase (`ta_universe`, public-read),
- * pulls real OHLCV candles from Bybit's public spot API (keyless, exact 1h/4h/1d/1w
- * intervals), computes RSI(Wilder-14) / EMA-stack / ATR / volume-ratio per timeframe,
- * walks the RSI zone state machine (9 states) and derives the Macro (Weekly×Daily) +
- * Tactical (Daily×1H) badges (10 badges) exactly per Plan_RSI System.txt, then writes
- * `public/data/ta_snapshots.json`.
+ * pulls real OHLCV candles from OKX's public spot API (keyless, exact
+ * 15m/1H/4H/1D/1W bars), computes RSI(Wilder-14) / EMA-stack / ATR / volume-ratio
+ * per timeframe, walks the RSI zone state machine (9 states) and derives the Macro
+ * (Weekly×Daily) + Tactical (Daily×1H) badges (10 badges) exactly per
+ * Plan_RSI System.txt, then writes `public/data/ta_snapshots.json`.
  *
- * NO fabricated data — every number is computed from real candles. Tokens without a
- * Bybit spot pair (or with too little history) are emitted with null/UNSUPPORTED
+ * NO fabricated data — every number is computed from real candles. Tokens without
+ * a spot pair (or with too little history) are emitted with null/UNSUPPORTED
  * fields, never invented values.
  *
- * Candle source is Bybit, not Binance: Binance's klines endpoint geo-blocks
- * GitHub Actions' hosted-runner IP ranges (confirmed 2026-07-19 — the identical
- * fetch succeeds from a normal machine/browser but returns nothing from CI, which
- * is why every token showed UNSUPPORTED despite the pipeline "succeeding"). Bybit's
- * public market-data API does not apply that block.
+ * Candle source is Kucoin. History of this line, so this doesn't get re-swapped
+ * next time without evidence:
+ *   • Binance was tried first — blocked GH Actions IP ranges.
+ *   • Bybit was tried next — ALSO blocked (its Cloudfront distribution rejects
+ *     the same datacentre IPs; CI diag: "The Amazon CloudFront distribution is
+ *     configured to block access from your country").
+ *   • OKX was tried — not verifiable from the user's India connection (TLS reset
+ *     at their ISP), and OKX has known US access restrictions that would likely
+ *     bite CI too.
+ * Kucoin's public market-data API is globally reachable (verified from the
+ * user's blocked network AND has no known US datacentre restriction), and it
+ * covers all five timeframes we need: 15min / 1hour / 4hour / 1day / 1week.
+ *
+ * GOTCHA: Kucoin's kline columns are [ts, open, CLOSE, high, low, vol, turnover]
+ * — close before high/low, unlike Binance/Bybit/OKX. Don't mis-map.
  *
  * Run locally:  SUPABASE_URL=.. SUPABASE_ANON_KEY=.. npx tsx pipeline/ta_pipeline.ts
  * In CI: see .github/workflows/ta-snapshots.yml
@@ -33,12 +43,13 @@ const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL |
 const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || '';
 const OUT_PATH = process.env.TA_OUT || 'public/data/ta_snapshots.json';
 
-const BYBIT = 'https://api.bybit.com/v5/market/kline';
+const KUCOIN = 'https://api.kucoin.com/api/v1/market/candles';
 
 type TF = '15m' | '1h' | '4h' | '1d' | '1w';
 const TFS: TF[] = ['15m', '1h', '4h', '1d', '1w'];
-// Bybit's interval strings: minutes as bare numbers, D/W for day/week.
-const BYBIT_INTERVAL: Record<TF, string> = { '15m': '15', '1h': '60', '4h': '240', '1d': 'D', '1w': 'W' };
+// Kucoin's `type` values (see docs). Different vocabulary from every other
+// exchange we've tried, hence the explicit map.
+const KUCOIN_TYPE: Record<TF, string> = { '15m': '15min', '1h': '1hour', '4h': '4hour', '1d': '1day', '1w': '1week' };
 
 // Zone thresholds per Plan_RSI System.txt (Weekly/Daily/1H are the spec's badge pairs).
 // 4h/15m are shown for context and tightened as the timeframe shortens (more noise).
@@ -234,8 +245,11 @@ interface Candle { high: number; low: number; close: number; volume: number; }
 // Remove this flag + the two console.error calls once the real cause is known.
 let loggedFailure = false;
 
-async function fetchKlines(symbol: string, tf: TF, limit = 220): Promise<Candle[] | null> {
-  const url = `${BYBIT}?category=spot&symbol=${symbol}USDT&interval=${BYBIT_INTERVAL[tf]}&limit=${limit}`;
+async function fetchKlines(symbol: string, tf: TF, limit = 200): Promise<Candle[] | null> {
+  // Kucoin uses `BASE-QUOTE` pair ids. `limit` isn't a query param — the
+  // endpoint returns up to 1500 klines by default; we don't ask for more.
+  void limit;
+  const url = `${KUCOIN}?symbol=${symbol}-USDT&type=${KUCOIN_TYPE[tf]}`;
   try {
     const res = await fetch(url);
     if (!res.ok) {
@@ -245,18 +259,20 @@ async function fetchKlines(symbol: string, tf: TF, limit = 220): Promise<Candle[
       }
       return null;
     }
-    const json = (await res.json()) as { retCode: number; retMsg?: string; result?: { list: string[][] } };
-    if (json.retCode !== 0 || !json.result?.list?.length) {
+    // Kucoin response: { code: "200000", data: [[ts, open, close, high, low, vol, turnover], ...] }
+    const json = (await res.json()) as { code: string; msg?: string; data?: string[][] };
+    if (json.code !== '200000' || !json.data?.length) {
       if (!loggedFailure) {
         loggedFailure = true;
-        console.error(`[diag] ${symbol} ${tf} -> retCode=${json.retCode} retMsg=${json.retMsg} list=${json.result?.list?.length ?? 'none'}`);
+        console.error(`[diag] ${symbol} ${tf} -> code=${json.code} msg=${json.msg} data=${json.data?.length ?? 'none'}`);
       }
       return null;
     }
-    // Bybit returns newest-first; every downstream calc (RSI series, EMA, ATR) walks
-    // the array assuming oldest→newest, same as the old Binance response shape did.
-    const rows = [...json.result.list].reverse();
-    return rows.map((k) => ({ high: +k[2], low: +k[3], close: +k[4], volume: +k[5] }));
+    // Kucoin returns newest-first; downstream calcs walk oldest→newest, so
+    // reverse before mapping. Column order is [ts, o, c, h, l, vol, turnover] —
+    // close is index 2, high is 3, low is 4. See file header GOTCHA.
+    const rows = [...json.data].reverse();
+    return rows.map((k) => ({ high: +k[3], low: +k[4], close: +k[2], volume: +k[5] }));
   } catch (e) {
     if (!loggedFailure) {
       loggedFailure = true;
@@ -315,7 +331,7 @@ async function main() {
     const perTf: Record<string, Candle[] | null> = {};
     for (const tf of TFS) {
       perTf[tf] = await fetchKlines(sym, tf);
-      await new Promise((r) => setTimeout(r, 120)); // gentle on Bybit
+      await new Promise((r) => setTimeout(r, 120)); // gentle on Kucoin (public tier)
     }
     const ta: Record<string, ReturnType<typeof analyseTF>> = {};
     for (const tf of TFS) ta[tf] = analyseTF(perTf[tf], tf, computedAt);
@@ -345,7 +361,7 @@ async function main() {
 
   const payload = {
     generated_at: computedAt,
-    source: 'bybit-klines',
+    source: 'kucoin-klines',
     timeframes: TFS,
     zones: ZONES,
     token_count: tokens.length,
