@@ -229,18 +229,39 @@ async function loadUniverse(): Promise<UniverseToken[]> {
 
 interface Candle { high: number; low: number; close: number; volume: number; }
 
+// Log the FIRST failure only, so the CI log tells us what actually happened
+// (blocked / rate-limited / bad response) without spamming 65 lines per run.
+// Remove this flag + the two console.error calls once the real cause is known.
+let loggedFailure = false;
+
 async function fetchKlines(symbol: string, tf: TF, limit = 220): Promise<Candle[] | null> {
   const url = `${BYBIT}?category=spot&symbol=${symbol}USDT&interval=${BYBIT_INTERVAL[tf]}&limit=${limit}`;
   try {
     const res = await fetch(url);
-    if (!res.ok) return null;
-    const json = (await res.json()) as { retCode: number; result?: { list: string[][] } };
-    if (json.retCode !== 0 || !json.result?.list?.length) return null;
+    if (!res.ok) {
+      if (!loggedFailure) {
+        loggedFailure = true;
+        console.error(`[diag] ${symbol} ${tf} -> HTTP ${res.status} ${res.statusText}; body: ${(await res.text()).slice(0, 300)}`);
+      }
+      return null;
+    }
+    const json = (await res.json()) as { retCode: number; retMsg?: string; result?: { list: string[][] } };
+    if (json.retCode !== 0 || !json.result?.list?.length) {
+      if (!loggedFailure) {
+        loggedFailure = true;
+        console.error(`[diag] ${symbol} ${tf} -> retCode=${json.retCode} retMsg=${json.retMsg} list=${json.result?.list?.length ?? 'none'}`);
+      }
+      return null;
+    }
     // Bybit returns newest-first; every downstream calc (RSI series, EMA, ATR) walks
     // the array assuming oldest→newest, same as the old Binance response shape did.
     const rows = [...json.result.list].reverse();
     return rows.map((k) => ({ high: +k[2], low: +k[3], close: +k[4], volume: +k[5] }));
-  } catch {
+  } catch (e) {
+    if (!loggedFailure) {
+      loggedFailure = true;
+      console.error(`[diag] ${symbol} ${tf} -> threw: ${e instanceof Error ? `${e.name}: ${e.message}` : String(e)}`);
+    }
     return null;
   }
 }
