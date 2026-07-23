@@ -44,12 +44,17 @@ const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPA
 const OUT_PATH = process.env.TA_OUT || 'public/data/ta_snapshots.json';
 
 const KUCOIN = 'https://api.kucoin.com/api/v1/market/candles';
+const HL_INFO = 'https://api.hyperliquid.xyz/info';
 
 type TF = '15m' | '1h' | '4h' | '1d' | '1w';
 const TFS: TF[] = ['15m', '1h', '4h', '1d', '1w'];
 // Kucoin's `type` values (see docs). Different vocabulary from every other
 // exchange we've tried, hence the explicit map.
 const KUCOIN_TYPE: Record<TF, string> = { '15m': '15min', '1h': '1hour', '4h': '4hour', '1d': '1day', '1w': '1week' };
+// Hyperliquid intervals — vocabulary matches ours except HL uses '1w' too. Bar-ms
+// used to size the startTime window so RSI(14)+EMA(34) settle (~200 bars).
+const HL_INTERVAL: Record<TF, string> = { '15m': '15m', '1h': '1h', '4h': '4h', '1d': '1d', '1w': '1w' };
+const HL_BAR_MS: Record<TF, number> = { '15m': 900_000, '1h': 3_600_000, '4h': 14_400_000, '1d': 86_400_000, '1w': 604_800_000 };
 
 // Zone thresholds per Plan_RSI System.txt (Weekly/Daily/1H are the spec's badge pairs).
 // 4h/15m are shown for context and tightened as the timeframe shortens (more noise).
@@ -130,43 +135,64 @@ function rsiDirection(cur: number | null, p1: number | null): RSIState extends n
 }
 
 /**
- * Walk the RSI zone state machine on the RSI series. Returns the current state and a
- * count of recent failed re-entry attempts (for STRUCTURAL badges).
+ * Zone state machine — reworked 2026-07-20 to match the user's spec:
+ *   "Entering 40 from below = Bottom Done, entering 60 from above = Top Done,
+ *    RSI sustained above 60 for K bars = Bull Trend, below 40 for K = Bear Trend."
+ *
+ * State semantics (names kept for backward compat with existing frontend UI):
+ *   CONFIRMED_BULL → RSI has stayed above `high` for K=sustain consecutive bars (real bull trend).
+ *   CONFIRMED_BEAR → RSI has stayed below `low`  for K=sustain consecutive bars (real bear trend).
+ *   HIGH_ZONE      → currently above `high`, not yet sustained (single touch).
+ *   LOW_ZONE       → currently below `low`,  not yet sustained.
+ *   EXITING_HIGH   → RSI in the 40–60 band, most recent zone touch (within lookback) was HIGH → "Top Done".
+ *   EXITING_LOW    → RSI in the 40–60 band, most recent zone touch (within lookback) was LOW  → "Bottom Done".
+ *   RANGE          → no recent zone touch at all.
+ *
+ * This replaces the older "last-zone-visited wins regardless of how long ago" logic,
+ * which produced misleading labels like BTC 4H CONFIRMED_BEAR at RSI 59.68.
  */
 function computeState(rsi: (number | null)[], z: { low: number; high: number; sustain: number }): { state: RSIState; failed: number } {
   const vals = rsi.filter((v): v is number => v != null);
   if (vals.length < z.sustain + 2) return { state: 'UNSUPPORTED', failed: 0 };
   const n = vals.length;
   const cur = vals[n - 1];
+  const K = z.sustain;
 
-  if (cur >= z.high) return { state: 'HIGH_ZONE', failed: 0 };
-  if (cur <= z.low) return { state: 'LOW_ZONE', failed: 0 };
+  // Sustained-trend check: currently in a zone AND has been for K consecutive bars.
+  if (cur >= z.high) {
+    const sustainedHigh = vals.slice(-K).every((v) => v >= z.high);
+    if (sustainedHigh) return { state: 'CONFIRMED_BULL', failed: 0 };
+    return { state: 'HIGH_ZONE', failed: 0 };
+  }
+  if (cur <= z.low) {
+    const sustainedLow = vals.slice(-K).every((v) => v <= z.low);
+    if (sustainedLow) return { state: 'CONFIRMED_BEAR', failed: 0 };
+    return { state: 'LOW_ZONE', failed: 0 };
+  }
 
-  // In range: find the last candle that was inside a zone, and which zone.
+  // Mid-band: look for the most-recent zone touch within a "recent enough" window
+  // to distinguish a fresh crossing (EXITING_*) from plain RANGE.
+  const window = K * 3;
+  const winStart = Math.max(0, n - window);
   let lastZoneIdx = -1;
   let lastZoneKind: 'low' | 'high' | null = null;
-  for (let i = n - 1; i >= 0; i--) {
+  for (let i = n - 1; i >= winStart; i--) {
     if (vals[i] <= z.low) { lastZoneIdx = i; lastZoneKind = 'low'; break; }
     if (vals[i] >= z.high) { lastZoneIdx = i; lastZoneKind = 'high'; break; }
   }
   if (lastZoneIdx === -1 || lastZoneKind == null) return { state: 'RANGE', failed: 0 };
 
-  const sinceExit = n - 1 - lastZoneIdx; // candles since we were last in-zone
-  // Count failed re-entries within a rolling recent window (structural pressure).
-  const winStart = Math.max(1, n - 4 * z.sustain);
+  // Rolling failed-re-entry count for STRUCTURAL badges (unchanged from prior logic).
   let failed = 0;
-  for (let i = winStart; i < n; i++) {
+  for (let i = Math.max(1, n - 4 * K); i < n; i++) {
     if (lastZoneKind === 'low' && vals[i] <= z.low && vals[i - 1] > z.low) failed++;
     if (lastZoneKind === 'high' && vals[i] >= z.high && vals[i - 1] < z.high) failed++;
   }
 
-  if (lastZoneKind === 'low') {
-    if (sinceExit < z.sustain) return { state: 'EXITING_LOW', failed };
-    return { state: 'CONFIRMED_BULL', failed };
-  } else {
-    if (sinceExit < z.sustain) return { state: 'EXITING_HIGH', failed };
-    return { state: 'CONFIRMED_BEAR', failed };
-  }
+  return {
+    state: lastZoneKind === 'low' ? 'EXITING_LOW' : 'EXITING_HIGH',
+    failed,
+  };
 }
 
 // Re-entry (FAILED) detection: exited a zone then came back within sustain window.
@@ -245,7 +271,56 @@ interface Candle { high: number; low: number; close: number; volume: number; }
 // Remove this flag + the two console.error calls once the real cause is known.
 let loggedFailure = false;
 
+function isHip3Ticker(symbol: string): boolean {
+  return typeof symbol === 'string' && symbol.includes(':');
+}
+
+// Hyperliquid `/info candleSnapshot` for HIP-3 markets (equities/commodities/FX
+// listed on builder-deployed dexes like `xyz:AMZN`, `xyz:GOLD`). Frontend ⟳ has
+// used this since 2026-07-21 (`services/liveIndicators.ts`); this brings the
+// pipeline in line so those rows land in the snapshot instead of `UNSUPPORTED`.
+// HL row shape: `{t, T, s, i, o, c, h, l, v, n}` — c/h/l/v arrive as STRINGS.
+async function fetchHlKlines(coin: string, tf: TF): Promise<Candle[] | null> {
+  const now = Date.now();
+  const startTime = now - HL_BAR_MS[tf] * 200;
+  try {
+    const res = await fetch(HL_INFO, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', accept: 'application/json' },
+      body: JSON.stringify({ type: 'candleSnapshot', req: { coin, interval: HL_INTERVAL[tf], startTime, endTime: now } }),
+    });
+    if (!res.ok) {
+      if (!loggedFailure) {
+        loggedFailure = true;
+        console.error(`[diag hl] ${coin} ${tf} -> HTTP ${res.status} ${res.statusText}; body: ${(await res.text()).slice(0, 300)}`);
+      }
+      return null;
+    }
+    const rows = (await res.json()) as Array<{ o: string; c: string; h: string; l: string; v: string }> | null;
+    if (!Array.isArray(rows) || rows.length === 0) {
+      if (!loggedFailure) {
+        loggedFailure = true;
+        console.error(`[diag hl] ${coin} ${tf} -> empty candleSnapshot (market may not trade)`);
+      }
+      return null;
+    }
+    // HL ships oldest-first — no reverse.
+    return rows
+      .map((k) => ({ high: +k.h, low: +k.l, close: +k.c, volume: +k.v }))
+      .filter((c) => Number.isFinite(c.close) && Number.isFinite(c.high) && Number.isFinite(c.low));
+  } catch (e) {
+    if (!loggedFailure) {
+      loggedFailure = true;
+      console.error(`[diag hl] ${coin} ${tf} -> threw: ${e instanceof Error ? `${e.name}: ${e.message}` : String(e)}`);
+    }
+    return null;
+  }
+}
+
 async function fetchKlines(symbol: string, tf: TF, limit = 200): Promise<Candle[] | null> {
+  // HIP-3 tickers (namespaced coin ids like `xyz:AMZN`) don't exist on Kucoin —
+  // route them straight to Hyperliquid. Everything else stays on Kucoin.
+  if (isHip3Ticker(symbol)) return fetchHlKlines(symbol, tf);
   // Kucoin uses `BASE-QUOTE` pair ids. `limit` isn't a query param — the
   // endpoint returns up to 1500 klines by default; we don't ask for more.
   void limit;
@@ -327,7 +402,9 @@ async function main() {
 
   const tokens: unknown[] = [];
   for (const t of universe) {
-    const sym = t.symbol.toUpperCase();
+    // Preserve original casing for HIP-3 tickers — HL expects `xyz:AMZN`, not
+    // `XYZ:AMZN`. Uppercase only regular crypto symbols for Kucoin.
+    const sym = isHip3Ticker(t.symbol) ? t.symbol : t.symbol.toUpperCase();
     const perTf: Record<string, Candle[] | null> = {};
     for (const tf of TFS) {
       perTf[tf] = await fetchKlines(sym, tf);
