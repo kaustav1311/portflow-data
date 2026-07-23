@@ -235,16 +235,77 @@ type BadgeName =
   | 'BULL_FORMING' | 'BEAR_FORMING' | 'STRUCTURAL_BULL' | 'STRUCTURAL_BEAR'
   | 'DIVERGENCE' | 'NEUTRAL';
 
+/**
+ * Score-based badge derivation — 2026-07-23 rewrite.
+ *
+ * The prior table only fired for ~9 specific combos. HIP-3 equities spend most
+ * of their time in RANGE × EXITING_* combos (see `xyz:AMZN` in the field), which
+ * ALL fell through to NEUTRAL — so every stock read "no signal" regardless of
+ * what was actually happening. This scores father and son independently and
+ * synthesises the verdict, so any state combo produces a meaningful read while
+ * the original spec-cases keep their exact labels.
+ *
+ * Per-state contribution:
+ *   CONFIRMED_BULL  +2   sustained above high
+ *   CONFIRMED_BEAR  -2
+ *   EXITING_LOW     +1   fresh cross up from oversold
+ *   EXITING_HIGH    -1   fresh cross down from overbought
+ *   LOW_ZONE        -0.5 currently oversold, not yet sustained
+ *   HIGH_ZONE       +0.5 currently overbought, not yet sustained
+ *   RANGE / other    0
+ *
+ * Father carries 2× weight (macro > tactical). Failed re-entries on the father
+ * still promote to STRUCTURAL_* — those are the "trend keeps breaking" reads
+ * and dominate other signals when they fire. DIVERGENCE reserved for hard
+ * father-vs-son opposition (CONFIRMED_BULL × CONFIRMED_BEAR or the mirror).
+ */
+function stateScore(s: RSIState): number {
+  switch (s) {
+    case 'CONFIRMED_BULL': return 2;
+    case 'CONFIRMED_BEAR': return -2;
+    case 'EXITING_LOW': return 1;
+    case 'EXITING_HIGH': return -1;
+    case 'LOW_ZONE': return -0.5;
+    case 'HIGH_ZONE': return 0.5;
+    default: return 0;
+  }
+}
+
 function deriveBadge(father: RSIState, son: RSIState, fatherFailed: number): BadgeName {
+  // Structural (father's zone keeps breaking) wins outright — it's the strongest
+  // multi-bar read available and shouldn't get diluted by a mid-band son.
+  if (father === 'LOW_ZONE' && fatherFailed >= 2) return 'STRUCTURAL_BEAR';
+  if (father === 'HIGH_ZONE' && fatherFailed >= 2) return 'STRUCTURAL_BULL';
+
+  // Hard divergence — sustained conflict between the two timeframes.
+  if (father === 'CONFIRMED_BULL' && son === 'CONFIRMED_BEAR') return 'DIVERGENCE';
+  if (father === 'CONFIRMED_BEAR' && son === 'CONFIRMED_BULL') return 'DIVERGENCE';
+
+  const score = stateScore(father) * 2 + stateScore(son);
+
+  // Preserve the exact original spec labels for the canonical combos —
+  // downstream UIs and prior memories reference these strings verbatim.
   if (father === 'CONFIRMED_BULL' && son === 'CONFIRMED_BULL') return 'BULL_ALIGNED';
   if (father === 'CONFIRMED_BEAR' && son === 'CONFIRMED_BEAR') return 'BEAR_ALIGNED';
   if (father === 'EXITING_LOW' && son === 'CONFIRMED_BULL') return 'EARLY_BULL';
   if (father === 'EXITING_HIGH' && son === 'CONFIRMED_BEAR') return 'EARLY_BEAR';
   if (father === 'LOW_ZONE' && son === 'EXITING_LOW') return 'BULL_FORMING';
   if (father === 'HIGH_ZONE' && son === 'EXITING_HIGH') return 'BEAR_FORMING';
-  if (father === 'LOW_ZONE' && fatherFailed >= 2) return 'STRUCTURAL_BEAR';
-  if (father === 'HIGH_ZONE' && fatherFailed >= 2) return 'STRUCTURAL_BULL';
-  if ((father === 'CONFIRMED_BULL' && son === 'CONFIRMED_BEAR') || (father === 'CONFIRMED_BEAR' && son === 'CONFIRMED_BULL')) return 'DIVERGENCE';
+
+  // Score-driven fallback for everything else.
+  //   ≥ 3.5    → BULL_ALIGNED   (confirmed macro + supporting son)
+  //   1.5–3.5  → EARLY_BULL     (one leg strong bull, other neutral/mild)
+  //   0.5–1.5  → BULL_FORMING   (light bullish lean)
+  //   -0.5–0.5 → NEUTRAL
+  //   -1.5–-0.5→ BEAR_FORMING
+  //   -3.5–-1.5→ EARLY_BEAR
+  //   ≤ -3.5   → BEAR_ALIGNED
+  if (score >= 3.5) return 'BULL_ALIGNED';
+  if (score >= 1.5) return 'EARLY_BULL';
+  if (score >= 0.5) return 'BULL_FORMING';
+  if (score <= -3.5) return 'BEAR_ALIGNED';
+  if (score <= -1.5) return 'EARLY_BEAR';
+  if (score <= -0.5) return 'BEAR_FORMING';
   return 'NEUTRAL';
 }
 
