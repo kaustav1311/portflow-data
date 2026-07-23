@@ -477,9 +477,15 @@ async function main() {
     const supported = TFS.some((tf) => ta[tf].state !== 'UNSUPPORTED');
     const lastClose = perTf['1h']?.at(-1)?.close ?? perTf['1d']?.at(-1)?.close ?? null;
 
-    // Macro = Weekly(father) × Daily(son); Tactical = Daily(father) × 1H(son)
-    const macro = deriveBadge(ta['1w'].state, ta['1d'].state, ta['1w'].failed);
-    const tactical = deriveBadge(ta['1d'].state, ta['1h'].state, ta['1d'].failed);
+    // Three anchors, all father-son with the bigger timeframe leading (father
+    // × 2 weight in deriveBadge). Fastest to slowest:
+    //   pulse    = 1H (father) × 15m (son) — nearest-term impulse
+    //   tactical = 1D (father) × 1H  (son) — trend
+    //   macro    = 1W (father) × 1D  (son) — momentum
+    // UI labels this row: Impulse | Trend | Momentum.
+    const pulse    = deriveBadge(ta['1h'].state, ta['15m'].state, ta['1h'].failed);
+    const tactical = deriveBadge(ta['1d'].state, ta['1h'].state,  ta['1d'].failed);
+    const macro    = deriveBadge(ta['1w'].state, ta['1d'].state,  ta['1w'].failed);
 
     tokens.push({
       coin_id: t.coin_id,
@@ -490,11 +496,12 @@ async function main() {
       supported,
       ta: Object.fromEntries(TFS.map((tf) => [tf, { ...ta[tf], failed: undefined }])),
       badges: {
-        macro: { badge_name: macro, father_state: ta['1w'].state, son_state: ta['1d'].state, failed_attempts: ta['1w'].failed },
-        tactical: { badge_name: tactical, father_state: ta['1d'].state, son_state: ta['1h'].state, failed_attempts: ta['1d'].failed },
+        pulse:    { badge_name: pulse,    father_state: ta['1h'].state, son_state: ta['15m'].state, failed_attempts: ta['1h'].failed },
+        tactical: { badge_name: tactical, father_state: ta['1d'].state, son_state: ta['1h'].state,  failed_attempts: ta['1d'].failed },
+        macro:    { badge_name: macro,    father_state: ta['1w'].state, son_state: ta['1d'].state,  failed_attempts: ta['1w'].failed },
       },
     });
-    console.log(`  ${sym.padEnd(6)} macro=${macro} tactical=${tactical} 1d.rsi=${ta['1d'].rsi ?? '—'} state=${ta['1d'].state}`);
+    console.log(`  ${sym.padEnd(6)} pulse=${pulse} tactical=${tactical} macro=${macro} 1d.rsi=${ta['1d'].rsi ?? '—'} state=${ta['1d'].state}`);
   }
 
   const payload = {
