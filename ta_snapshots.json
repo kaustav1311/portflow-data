@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T21:41:37.276Z",
+  "generated_at": "2026-08-08T22:42:23.666Z",
   "source": "kucoin-klines",
   "timeframes": [
     "15m",
@@ -52,44 +52,44 @@
       "symbol": "xyz:CXMT",
       "name": "CXMT",
       "image": "https://app.hyperliquid.xyz/coins/xyz%3ACXMT.svg",
-      "price": 7.3129,
+      "price": 7.315,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 59.33,
-          "rsi_prev1": 62.7,
+          "rsi": 56.47,
+          "rsi_prev1": 55.39,
           "rsi_prev2": 60.59,
-          "rsi_direction": "DROPPING",
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.0311,
-          "atr_pct": 0.43,
-          "vol_ratio": 2.39,
+          "atr": 0.036981,
+          "atr_pct": 0.51,
+          "vol_ratio": 0.32,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 60.65,
-          "rsi_prev1": 54.99,
-          "rsi_prev2": 57.5,
-          "rsi_direction": "CLIMBING",
+          "rsi": 60.97,
+          "rsi_prev1": 59.84,
+          "rsi_prev2": 54.99,
+          "rsi_direction": "RISING",
           "ema_stack": "MIXED",
-          "atr": 0.059619,
-          "atr_pct": 0.82,
-          "vol_ratio": 1.79,
+          "atr": 0.060781,
+          "atr_pct": 0.83,
+          "vol_ratio": 1.96,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 45.93,
+          "rsi": 46.04,
           "rsi_prev1": 44.29,
           "rsi_prev2": 40.43,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
-          "atr": 0.144613,
+          "atr": 0.145135,
           "atr_pct": 1.98,
-          "vol_ratio": 0.16,
+          "vol_ratio": 0.37,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
           "rsi": null,
@@ -101,7 +101,7 @@
           "atr_pct": null,
           "vol_ratio": null,
           "state": "UNSUPPORTED",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
           "rsi": null,
@@ -113,7 +113,7 @@
           "atr_pct": null,
           "vol_ratio": null,
           "state": "UNSUPPORTED",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -142,68 +142,68 @@
       "symbol": "APT",
       "name": "Aptos",
       "image": "https://coin-images.coingecko.com/coins/images/26455/large/Aptos-Network-Symbol-Black-RGB-1x.png",
-      "price": 0.6056,
+      "price": 0.6033,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 46.04,
-          "rsi_prev1": 47.68,
-          "rsi_prev2": 44.95,
+          "rsi": 37.21,
+          "rsi_prev1": 39.81,
+          "rsi_prev2": 41.34,
           "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
-          "atr": 0.001364,
-          "atr_pct": 0.23,
-          "vol_ratio": 0.18,
+          "atr": 0.001255,
+          "atr_pct": 0.21,
+          "vol_ratio": 0.9,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 61.36,
-          "rsi_prev1": 62.88,
-          "rsi_prev2": 65.92,
-          "rsi_direction": "FALLING",
+          "rsi": 56.63,
+          "rsi_prev1": 59.71,
+          "rsi_prev2": 62.88,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.003613,
-          "atr_pct": 0.6,
-          "vol_ratio": 0.18,
+          "atr": 0.003527,
+          "atr_pct": 0.58,
+          "vol_ratio": 0.63,
           "state": "FAILED_TOP",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 64.57,
+          "rsi": 61.99,
           "rsi_prev1": 67.12,
           "rsi_prev2": 70.71,
-          "rsi_direction": "FALLING",
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.008292,
-          "atr_pct": 1.37,
-          "vol_ratio": 0.08,
+          "atr": 0.008385,
+          "atr_pct": 1.39,
+          "vol_ratio": 0.29,
           "state": "FAILED_TOP",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 53.06,
+          "rsi": 52.42,
           "rsi_prev1": 44.78,
           "rsi_prev2": 47.99,
           "rsi_direction": "CLIMBING",
           "ema_stack": "BEARISH",
           "atr": 0.026395,
-          "atr_pct": 4.36,
-          "vol_ratio": 1.01,
+          "atr_pct": 4.38,
+          "vol_ratio": 1.04,
           "state": "EXITING_LOW",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 31.76,
+          "rsi": 31.63,
           "rsi_prev1": 31.01,
           "rsi_prev2": 29.62,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 0.182525,
-          "atr_pct": 30.14,
-          "vol_ratio": 0.14,
+          "atr_pct": 30.25,
+          "vol_ratio": 0.15,
           "state": "CONFIRMED_BEAR",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -232,56 +232,56 @@
       "symbol": "GENIUS",
       "name": "Genius",
       "image": "https://coin-images.coingecko.com/coins/images/71660/large/genius.png",
-      "price": 0.3467,
+      "price": 0.3457,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 56.84,
-          "rsi_prev1": 49.45,
-          "rsi_prev2": 49.45,
-          "rsi_direction": "CLIMBING",
+          "rsi": 50.59,
+          "rsi_prev1": 57.78,
+          "rsi_prev2": 56.83,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.000741,
-          "atr_pct": 0.21,
-          "vol_ratio": 0.93,
+          "atr": 0.000752,
+          "atr_pct": 0.22,
+          "vol_ratio": 1.72,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 56.4,
-          "rsi_prev1": 56.67,
-          "rsi_prev2": 54.47,
-          "rsi_direction": "FALLING",
+          "rsi": 53.63,
+          "rsi_prev1": 56.9,
+          "rsi_prev2": 56.7,
+          "rsi_direction": "DROPPING",
           "ema_stack": "MIXED",
-          "atr": 0.002009,
-          "atr_pct": 0.58,
-          "vol_ratio": 0.97,
+          "atr": 0.001971,
+          "atr_pct": 0.57,
+          "vol_ratio": 0.58,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 51.98,
+          "rsi": 51.01,
           "rsi_prev1": 51.01,
           "rsi_prev2": 52.09,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FLAT",
           "ema_stack": "BEARISH",
-          "atr": 0.006095,
-          "atr_pct": 1.76,
-          "vol_ratio": 0.18,
+          "atr": 0.006102,
+          "atr_pct": 1.77,
+          "vol_ratio": 0.3,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 48.93,
+          "rsi": 48.54,
           "rsi_prev1": 46.67,
           "rsi_prev2": 45.92,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 0.021727,
-          "atr_pct": 6.27,
-          "vol_ratio": 0.25,
+          "atr_pct": 6.28,
+          "vol_ratio": 0.26,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
           "rsi": null,
@@ -293,7 +293,7 @@
           "atr_pct": null,
           "vol_ratio": null,
           "state": "UNSUPPORTED",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -322,75 +322,75 @@
       "symbol": "MOVR",
       "name": "Moonriver",
       "image": "https://coin-images.coingecko.com/coins/images/17984/large/Moonriver_MOVR_ICON.png",
-      "price": 1.1756,
+      "price": 1.1899,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 83.07,
-          "rsi_prev1": 72.63,
-          "rsi_prev2": 77.47,
-          "rsi_direction": "CLIMBING",
+          "rsi": 74.99,
+          "rsi_prev1": 84.27,
+          "rsi_prev2": 80.66,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.004335,
-          "atr_pct": 0.37,
-          "vol_ratio": 6.23,
-          "state": "HIGH_ZONE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "atr": 0.006294,
+          "atr_pct": 0.53,
+          "vol_ratio": 1.49,
+          "state": "FAILED_TOP",
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 72.02,
-          "rsi_prev1": 67.38,
-          "rsi_prev2": 48.83,
+          "rsi": 77.59,
+          "rsi_prev1": 68.91,
+          "rsi_prev2": 67.38,
           "rsi_direction": "CLIMBING",
           "ema_stack": "MIXED",
-          "atr": 0.006672,
-          "atr_pct": 0.57,
-          "vol_ratio": 8.12,
+          "atr": 0.008381,
+          "atr_pct": 0.7,
+          "vol_ratio": 5.07,
           "state": "HIGH_ZONE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 57.01,
+          "rsi": 60.83,
           "rsi_prev1": 45.74,
           "rsi_prev2": 45.26,
           "rsi_direction": "CLIMBING",
           "ema_stack": "BEARISH",
-          "atr": 0.017844,
-          "atr_pct": 1.52,
-          "vol_ratio": 3.87,
+          "atr": 0.019151,
+          "atr_pct": 1.61,
+          "vol_ratio": 5.47,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 44.91,
+          "rsi": 46.84,
           "rsi_prev1": 40.24,
           "rsi_prev2": 43.78,
           "rsi_direction": "CLIMBING",
           "ema_stack": "BEARISH",
-          "atr": 0.063266,
-          "atr_pct": 5.38,
-          "vol_ratio": 1.95,
+          "atr": 0.064573,
+          "atr_pct": 5.43,
+          "vol_ratio": 2.59,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 38.77,
+          "rsi": 39.1,
           "rsi_prev1": 38.12,
           "rsi_prev2": 37.86,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 0.468756,
-          "atr_pct": 39.87,
-          "vol_ratio": 0.16,
+          "atr_pct": 39.39,
+          "vol_ratio": 0.18,
           "state": "CONFIRMED_BEAR",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
         "pulse": {
-          "badge_name": "EARLY_BULL",
+          "badge_name": "BULL_FORMING",
           "father_state": "HIGH_ZONE",
-          "son_state": "HIGH_ZONE",
+          "son_state": "FAILED_TOP",
           "failed_attempts": 0
         },
         "tactical": {
@@ -412,68 +412,68 @@
       "symbol": "XPIN",
       "name": "XPIN Network",
       "image": "https://coin-images.coingecko.com/coins/images/68422/large/xpin.png",
-      "price": 0.0016958,
+      "price": 0.0017025,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 60.13,
-          "rsi_prev1": 55.8,
-          "rsi_prev2": 58.63,
-          "rsi_direction": "CLIMBING",
+          "rsi": 64.11,
+          "rsi_prev1": 61.22,
+          "rsi_prev2": 61.22,
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.000006,
-          "atr_pct": 0.34,
-          "vol_ratio": 0.03,
+          "atr": 0.000005,
+          "atr_pct": 0.31,
+          "vol_ratio": 0.38,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 54.66,
-          "rsi_prev1": 54.66,
-          "rsi_prev2": 50.01,
-          "rsi_direction": "FLAT",
+          "rsi": 55.99,
+          "rsi_prev1": 55.02,
+          "rsi_prev2": 54.65,
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.000026,
-          "atr_pct": 1.55,
-          "vol_ratio": 0.14,
+          "atr": 0.000025,
+          "atr_pct": 1.46,
+          "vol_ratio": 0.04,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 57.47,
+          "rsi": 58.17,
           "rsi_prev1": 54.84,
           "rsi_prev2": 59.11,
-          "rsi_direction": "RISING",
+          "rsi_direction": "CLIMBING",
           "ema_stack": "BULLISH",
-          "atr": 0.000058,
-          "atr_pct": 3.43,
-          "vol_ratio": 0.09,
+          "atr": 0.000059,
+          "atr_pct": 3.45,
+          "vol_ratio": 0.16,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 61.31,
+          "rsi": 61.66,
           "rsi_prev1": 58.58,
           "rsi_prev2": 61.26,
-          "rsi_direction": "RISING",
+          "rsi_direction": "CLIMBING",
           "ema_stack": "BULLISH",
           "atr": 0.000134,
-          "atr_pct": 7.92,
-          "vol_ratio": 0.56,
+          "atr_pct": 7.89,
+          "vol_ratio": 0.57,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 56.21,
+          "rsi": 56.34,
           "rsi_prev1": 54.65,
           "rsi_prev2": 52.28,
           "rsi_direction": "RISING",
           "ema_stack": "MIXED",
           "atr": 0.000434,
-          "atr_pct": 25.59,
+          "atr_pct": 25.49,
           "vol_ratio": 0.28,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -502,59 +502,59 @@
       "symbol": "BTC",
       "name": "Bitcoin",
       "image": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png",
-      "price": 65032,
+      "price": 64971.6,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 44.74,
-          "rsi_prev1": 45.53,
-          "rsi_prev2": 47.15,
-          "rsi_direction": "FALLING",
+          "rsi": 35.99,
+          "rsi_prev1": 39.67,
+          "rsi_prev2": 40.07,
+          "rsi_direction": "DROPPING",
           "ema_stack": "MIXED",
-          "atr": 28.845829,
-          "atr_pct": 0.04,
-          "vol_ratio": 3.12,
+          "atr": 29.805665,
+          "atr_pct": 0.05,
+          "vol_ratio": 1.77,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 54.24,
-          "rsi_prev1": 58.77,
-          "rsi_prev2": 58.26,
+          "rsi": 49.34,
+          "rsi_prev1": 52.6,
+          "rsi_prev2": 58.78,
           "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 103.977458,
+          "atr": 103.473693,
           "atr_pct": 0.16,
-          "vol_ratio": 2.7,
+          "vol_ratio": 0.83,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 61.63,
+          "rsi": 59.81,
           "rsi_prev1": 62.94,
           "rsi_prev2": 63.06,
-          "rsi_direction": "FALLING",
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 387.916955,
+          "atr": 392.231241,
           "atr_pct": 0.6,
-          "vol_ratio": 0.34,
+          "vol_ratio": 0.45,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 55,
+          "rsi": 54.69,
           "rsi_prev1": 54.42,
           "rsi_prev2": 51.39,
           "rsi_direction": "RISING",
           "ema_stack": "MIXED",
           "atr": 1419.818972,
-          "atr_pct": 2.18,
-          "vol_ratio": 0.33,
+          "atr_pct": 2.19,
+          "vol_ratio": 0.35,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 41.28,
+          "rsi": 41.19,
           "rsi_prev1": 40.71,
           "rsi_prev2": 39.73,
           "rsi_direction": "RISING",
@@ -563,7 +563,7 @@
           "atr_pct": 8.69,
           "vol_ratio": 0.26,
           "state": "FAILED_BOTTOM",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -592,68 +592,68 @@
       "symbol": "ETH",
       "name": "Ethereum",
       "image": "https://assets.coingecko.com/coins/images/279/small/ethereum.png",
-      "price": 1921.52,
+      "price": 1919.57,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 52.27,
-          "rsi_prev1": 49.09,
-          "rsi_prev2": 47.08,
-          "rsi_direction": "CLIMBING",
+          "rsi": 43.48,
+          "rsi_prev1": 48.27,
+          "rsi_prev2": 43.37,
+          "rsi_direction": "DROPPING",
           "ema_stack": "MIXED",
-          "atr": 1.304645,
+          "atr": 1.377893,
           "atr_pct": 0.07,
-          "vol_ratio": 5.35,
+          "vol_ratio": 0.33,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 55.98,
-          "rsi_prev1": 54.16,
-          "rsi_prev2": 54.21,
-          "rsi_direction": "RISING",
+          "rsi": 52.17,
+          "rsi_prev1": 54.73,
+          "rsi_prev2": 54.15,
+          "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 4.362609,
-          "atr_pct": 0.23,
-          "vol_ratio": 2.26,
+          "atr": 4.198521,
+          "atr_pct": 0.22,
+          "vol_ratio": 0.7,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 61.2,
+          "rsi": 60,
           "rsi_prev1": 60.68,
           "rsi_prev2": 62.23,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 15.51418,
+          "atr": 15.557037,
           "atr_pct": 0.81,
-          "vol_ratio": 0.35,
+          "vol_ratio": 0.5,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 57.14,
+          "rsi": 56.91,
           "rsi_prev1": 56.26,
           "rsi_prev2": 55.09,
           "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
           "atr": 57.110551,
-          "atr_pct": 2.97,
-          "vol_ratio": 0.3,
+          "atr_pct": 2.98,
+          "vol_ratio": 0.32,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 42.97,
+          "rsi": 42.89,
           "rsi_prev1": 42.48,
           "rsi_prev2": 42.53,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 237.522123,
-          "atr_pct": 12.36,
+          "atr_pct": 12.37,
           "vol_ratio": 0.14,
           "state": "EXITING_LOW",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -682,68 +682,68 @@
       "symbol": "SOL",
       "name": "Solana",
       "image": "https://assets.coingecko.com/coins/images/4128/small/solana.png",
-      "price": 76.24,
+      "price": 76.17,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 55.83,
-          "rsi_prev1": 60.63,
-          "rsi_prev2": 59.42,
+          "rsi": 51.22,
+          "rsi_prev1": 55.95,
+          "rsi_prev2": 52.37,
           "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.130791,
+          "atr": 0.126894,
           "atr_pct": 0.17,
-          "vol_ratio": 0.53,
+          "vol_ratio": 0.73,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 72.8,
-          "rsi_prev1": 73.43,
-          "rsi_prev2": 72.32,
+          "rsi": 70.59,
+          "rsi_prev1": 71.88,
+          "rsi_prev2": 73.42,
           "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 0.337205,
-          "atr_pct": 0.44,
-          "vol_ratio": 0.38,
+          "atr": 0.329103,
+          "atr_pct": 0.43,
+          "vol_ratio": 0.28,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 69.52,
+          "rsi": 69.17,
           "rsi_prev1": 69.11,
           "rsi_prev2": 71.81,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
           "atr": 0.805826,
           "atr_pct": 1.06,
-          "vol_ratio": 0.27,
+          "vol_ratio": 0.38,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 54.93,
+          "rsi": 54.76,
           "rsi_prev1": 46.55,
           "rsi_prev2": 42.81,
           "rsi_direction": "CLIMBING",
           "ema_stack": "BEARISH",
           "atr": 2.452976,
           "atr_pct": 3.22,
-          "vol_ratio": 0.8,
+          "vol_ratio": 0.82,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 41.18,
+          "rsi": 41.14,
           "rsi_prev1": 39.38,
           "rsi_prev2": 39.1,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 11.224758,
-          "atr_pct": 14.73,
+          "atr_pct": 14.74,
           "vol_ratio": 0.21,
           "state": "FAILED_BOTTOM",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -772,81 +772,81 @@
       "symbol": "BNB",
       "name": "BNB",
       "image": "https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png",
-      "price": 602.229,
+      "price": 600.415,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 47.68,
-          "rsi_prev1": 50.46,
-          "rsi_prev2": 46.27,
+          "rsi": 39.79,
+          "rsi_prev1": 40.27,
+          "rsi_prev2": 35.76,
           "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
-          "atr": 1.054433,
-          "atr_pct": 0.18,
-          "vol_ratio": 3.82,
+          "atr": 1.112386,
+          "atr_pct": 0.19,
+          "vol_ratio": 0.24,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 66.84,
-          "rsi_prev1": 66.81,
-          "rsi_prev2": 72.1,
-          "rsi_direction": "FLAT",
+          "rsi": 58.49,
+          "rsi_prev1": 63.76,
+          "rsi_prev2": 66.81,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 2.271405,
+          "atr": 2.303244,
           "atr_pct": 0.38,
-          "vol_ratio": 1.06,
-          "state": "FAILED_TOP",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "vol_ratio": 0.79,
+          "state": "EXITING_HIGH",
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 61.98,
+          "rsi": 58.89,
           "rsi_prev1": 63.9,
           "rsi_prev2": 67.13,
-          "rsi_direction": "FALLING",
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 4.817008,
-          "atr_pct": 0.8,
-          "vol_ratio": 0.31,
+          "atr": 5.008651,
+          "atr_pct": 0.83,
+          "vol_ratio": 0.67,
           "state": "FAILED_TOP",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 63.56,
+          "rsi": 62.68,
           "rsi_prev1": 58.26,
           "rsi_prev2": 58.28,
           "rsi_direction": "CLIMBING",
           "ema_stack": "MIXED",
           "atr": 13.515455,
-          "atr_pct": 2.24,
-          "vol_ratio": 0.94,
+          "atr_pct": 2.25,
+          "vol_ratio": 1,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 43.72,
+          "rsi": 43.4,
           "rsi_prev1": 42.18,
           "rsi_prev2": 38.15,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 54.350268,
-          "atr_pct": 9.02,
-          "vol_ratio": 0.35,
+          "atr_pct": 9.05,
+          "vol_ratio": 0.36,
           "state": "EXITING_LOW",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
         "pulse": {
-          "badge_name": "NEUTRAL",
-          "father_state": "FAILED_TOP",
+          "badge_name": "EARLY_BEAR",
+          "father_state": "EXITING_HIGH",
           "son_state": "RANGE",
           "failed_attempts": 1
         },
         "tactical": {
-          "badge_name": "NEUTRAL",
+          "badge_name": "BEAR_FORMING",
           "father_state": "RANGE",
-          "son_state": "FAILED_TOP",
+          "son_state": "EXITING_HIGH",
           "failed_attempts": 0
         },
         "macro": {
@@ -862,68 +862,68 @@
       "symbol": "DOGE",
       "name": "Dogecoin",
       "image": "https://assets.coingecko.com/coins/images/5/small/dogecoin.png",
-      "price": 0.07094,
+      "price": 0.07058,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 47.91,
-          "rsi_prev1": 53.04,
-          "rsi_prev2": 50.3,
+          "rsi": 32.47,
+          "rsi_prev1": 36.38,
+          "rsi_prev2": 37.13,
           "rsi_direction": "DROPPING",
           "ema_stack": "MIXED",
-          "atr": 0.000125,
+          "atr": 0.000127,
           "atr_pct": 0.18,
-          "vol_ratio": 3.65,
+          "vol_ratio": 0.17,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 63.33,
-          "rsi_prev1": 65.93,
-          "rsi_prev2": 65.36,
-          "rsi_direction": "FALLING",
+          "rsi": 51.98,
+          "rsi_prev1": 63.69,
+          "rsi_prev2": 65.92,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.000288,
-          "atr_pct": 0.41,
-          "vol_ratio": 0.94,
+          "atr": 0.000296,
+          "atr_pct": 0.42,
+          "vol_ratio": 1.04,
           "state": "FAILED_TOP",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 61.86,
+          "rsi": 56.68,
           "rsi_prev1": 62.5,
           "rsi_prev2": 65.14,
-          "rsi_direction": "FALLING",
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.000634,
-          "atr_pct": 0.89,
-          "vol_ratio": 0.23,
+          "atr": 0.00066,
+          "atr_pct": 0.94,
+          "vol_ratio": 0.66,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 47.23,
+          "rsi": 45.79,
           "rsi_prev1": 41.59,
           "rsi_prev2": 39.1,
           "rsi_direction": "CLIMBING",
           "ema_stack": "BEARISH",
           "atr": 0.002265,
-          "atr_pct": 3.19,
-          "vol_ratio": 0.75,
+          "atr_pct": 3.21,
+          "vol_ratio": 0.8,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 31.91,
+          "rsi": 31.56,
           "rsi_prev1": 31.04,
           "rsi_prev2": 31.09,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 0.012217,
-          "atr_pct": 17.22,
-          "vol_ratio": 0.24,
+          "atr_pct": 17.31,
+          "vol_ratio": 0.25,
           "state": "CONFIRMED_BEAR",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -952,68 +952,68 @@
       "symbol": "LINK",
       "name": "Chainlink",
       "image": "https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png",
-      "price": 8.3466,
+      "price": 8.3212,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 57.16,
-          "rsi_prev1": 54.63,
-          "rsi_prev2": 53.27,
-          "rsi_direction": "RISING",
-          "ema_stack": "BULLISH",
-          "atr": 0.011128,
-          "atr_pct": 0.13,
-          "vol_ratio": 6.56,
+          "rsi": 41.31,
+          "rsi_prev1": 52.48,
+          "rsi_prev2": 50.46,
+          "rsi_direction": "DROPPING",
+          "ema_stack": "MIXED",
+          "atr": 0.011435,
+          "atr_pct": 0.14,
+          "vol_ratio": 0.4,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 62.66,
-          "rsi_prev1": 61.97,
-          "rsi_prev2": 60.28,
-          "rsi_direction": "RISING",
+          "rsi": 55.93,
+          "rsi_prev1": 62.62,
+          "rsi_prev2": 61.98,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.035492,
-          "atr_pct": 0.43,
-          "vol_ratio": 2.5,
+          "atr": 0.03528,
+          "atr_pct": 0.42,
+          "vol_ratio": 1.36,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 59.76,
+          "rsi": 57.56,
           "rsi_prev1": 58.71,
           "rsi_prev2": 60.45,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
-          "atr": 0.095042,
-          "atr_pct": 1.14,
-          "vol_ratio": 0.38,
+          "atr": 0.095784,
+          "atr_pct": 1.15,
+          "vol_ratio": 0.77,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 52.63,
+          "rsi": 52,
           "rsi_prev1": 48.43,
           "rsi_prev2": 48.6,
           "rsi_direction": "CLIMBING",
           "ema_stack": "BEARISH",
           "atr": 0.291774,
-          "atr_pct": 3.5,
-          "vol_ratio": 0.52,
+          "atr_pct": 3.51,
+          "vol_ratio": 0.57,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 41.98,
+          "rsi": 41.77,
           "rsi_prev1": 40.42,
           "rsi_prev2": 41.4,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 1.193496,
-          "atr_pct": 14.3,
-          "vol_ratio": 0.43,
+          "atr_pct": 14.34,
+          "vol_ratio": 0.44,
           "state": "EXITING_LOW",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1042,68 +1042,68 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "image": "https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png",
-      "price": 6.521,
+      "price": 6.481,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 43.99,
-          "rsi_prev1": 43.33,
-          "rsi_prev2": 42.7,
-          "rsi_direction": "RISING",
-          "ema_stack": "BEARISH",
-          "atr": 0.01072,
-          "atr_pct": 0.16,
-          "vol_ratio": 3.5,
-          "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
-        },
-        "1h": {
-          "rsi": 51.49,
-          "rsi_prev1": 50.72,
-          "rsi_prev2": 53.08,
-          "rsi_direction": "RISING",
-          "ema_stack": "BULLISH",
-          "atr": 0.029842,
-          "atr_pct": 0.46,
-          "vol_ratio": 1.44,
-          "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
-        },
-        "4h": {
-          "rsi": 49.23,
-          "rsi_prev1": 49.85,
-          "rsi_prev2": 52.05,
+          "rsi": 33.22,
+          "rsi_prev1": 35.16,
+          "rsi_prev2": 29.1,
           "rsi_direction": "FALLING",
           "ema_stack": "BEARISH",
-          "atr": 0.085512,
-          "atr_pct": 1.31,
-          "vol_ratio": 0.3,
+          "atr": 0.013141,
+          "atr_pct": 0.2,
+          "vol_ratio": 0.38,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
+        },
+        "1h": {
+          "rsi": 41.84,
+          "rsi_prev1": 50.45,
+          "rsi_prev2": 50.72,
+          "rsi_direction": "DROPPING",
+          "ema_stack": "BULLISH",
+          "atr": 0.030988,
+          "atr_pct": 0.48,
+          "vol_ratio": 1.4,
+          "state": "RANGE",
+          "computed_at": "2026-08-08T22:42:23.666Z"
+        },
+        "4h": {
+          "rsi": 45.51,
+          "rsi_prev1": 49.85,
+          "rsi_prev2": 52.05,
+          "rsi_direction": "DROPPING",
+          "ema_stack": "BEARISH",
+          "atr": 0.088155,
+          "atr_pct": 1.36,
+          "vol_ratio": 0.76,
+          "state": "RANGE",
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 49.26,
+          "rsi": 48.12,
           "rsi_prev1": 46.73,
           "rsi_prev2": 46.9,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 0.288513,
-          "atr_pct": 4.42,
-          "vol_ratio": 0.49,
+          "atr_pct": 4.45,
+          "vol_ratio": 0.54,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 31.66,
+          "rsi": 31.46,
           "rsi_prev1": 32.31,
           "rsi_prev2": 30.12,
           "rsi_direction": "FALLING",
           "ema_stack": "BEARISH",
           "atr": 1.249458,
-          "atr_pct": 19.16,
-          "vol_ratio": 0.35,
+          "atr_pct": 19.29,
+          "vol_ratio": 0.36,
           "state": "CONFIRMED_BEAR",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1132,68 +1132,68 @@
       "symbol": "DOT",
       "name": "Polkadot",
       "image": "https://assets.coingecko.com/coins/images/12171/small/polkadot.png",
-      "price": 0.819,
+      "price": 0.8166,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 52.34,
-          "rsi_prev1": 54.85,
-          "rsi_prev2": 59.07,
-          "rsi_direction": "FALLING",
-          "ema_stack": "BULLISH",
-          "atr": 0.001426,
+          "rsi": 41.82,
+          "rsi_prev1": 48.24,
+          "rsi_prev2": 45.66,
+          "rsi_direction": "DROPPING",
+          "ema_stack": "BEARISH",
+          "atr": 0.001385,
           "atr_pct": 0.17,
-          "vol_ratio": 4.15,
+          "vol_ratio": 0.11,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 51.25,
-          "rsi_prev1": 55.15,
-          "rsi_prev2": 47.77,
+          "rsi": 47.16,
+          "rsi_prev1": 51.08,
+          "rsi_prev2": 55.16,
           "rsi_direction": "DROPPING",
           "ema_stack": "MIXED",
-          "atr": 0.003873,
+          "atr": 0.003855,
           "atr_pct": 0.47,
-          "vol_ratio": 1.69,
+          "vol_ratio": 1.03,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 48.34,
+          "rsi": 45.97,
           "rsi_prev1": 46.24,
           "rsi_prev2": 47.35,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
           "atr": 0.009816,
           "atr_pct": 1.2,
-          "vol_ratio": 0.39,
+          "vol_ratio": 0.82,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 48.91,
+          "rsi": 48.36,
           "rsi_prev1": 48.81,
           "rsi_prev2": 49.37,
-          "rsi_direction": "FLAT",
+          "rsi_direction": "FALLING",
           "ema_stack": "BEARISH",
           "atr": 0.032719,
-          "atr_pct": 4,
-          "vol_ratio": 0.85,
+          "atr_pct": 4.01,
+          "vol_ratio": 0.91,
           "state": "EXITING_LOW",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 32.67,
+          "rsi": 32.61,
           "rsi_prev1": 33.25,
           "rsi_prev2": 29.37,
           "rsi_direction": "FALLING",
           "ema_stack": "BEARISH",
           "atr": 0.19656,
-          "atr_pct": 24,
-          "vol_ratio": 0.26,
+          "atr_pct": 24.07,
+          "vol_ratio": 0.27,
           "state": "CONFIRMED_BEAR",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1222,47 +1222,47 @@
       "symbol": "PAXG",
       "name": "PAX Gold",
       "image": "https://assets.coingecko.com/coins/images/9519/small/paxg.png",
-      "price": 4344.23,
+      "price": 4343.57,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 58.47,
-          "rsi_prev1": 59.47,
-          "rsi_prev2": 59.47,
-          "rsi_direction": "FALLING",
+          "rsi": 53.84,
+          "rsi_prev1": 53.84,
+          "rsi_prev2": 53.92,
+          "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
-          "atr": 0.915221,
+          "atr": 0.720018,
           "atr_pct": 0.02,
-          "vol_ratio": 4.42,
+          "vol_ratio": 0.07,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 61.57,
-          "rsi_prev1": 61.19,
-          "rsi_prev2": 60.42,
-          "rsi_direction": "RISING",
+          "rsi": 60.83,
+          "rsi_prev1": 60.83,
+          "rsi_prev2": 61.2,
+          "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
-          "atr": 5.556666,
-          "atr_pct": 0.13,
-          "vol_ratio": 0.9,
+          "atr": 5.161373,
+          "atr_pct": 0.12,
+          "vol_ratio": 0.09,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 80.11,
+          "rsi": 80.02,
           "rsi_prev1": 79.94,
           "rsi_prev2": 81.3,
           "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
           "atr": 22.411014,
           "atr_pct": 0.52,
-          "vol_ratio": 0.1,
+          "vol_ratio": 0.11,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 69.35,
+          "rsi": 69.29,
           "rsi_prev1": 69.33,
           "rsi_prev2": 63.96,
           "rsi_direction": "FLAT",
@@ -1271,10 +1271,10 @@
           "atr_pct": 1.63,
           "vol_ratio": 0.5,
           "state": "HIGH_ZONE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 49.92,
+          "rsi": 49.9,
           "rsi_prev1": 47.82,
           "rsi_prev2": 41.74,
           "rsi_direction": "RISING",
@@ -1283,7 +1283,7 @@
           "atr_pct": 5.93,
           "vol_ratio": 0.46,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1312,68 +1312,68 @@
       "symbol": "ONDO",
       "name": "Ondo",
       "image": "https://assets.coingecko.com/coins/images/26580/small/ONDO.png",
-      "price": 0.35362,
+      "price": 0.35229,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 39.09,
-          "rsi_prev1": 46.05,
-          "rsi_prev2": 54.16,
-          "rsi_direction": "DROPPING",
+          "rsi": 34.26,
+          "rsi_prev1": 36.91,
+          "rsi_prev2": 30.96,
+          "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
-          "atr": 0.001042,
-          "atr_pct": 0.29,
-          "vol_ratio": 1.45,
+          "atr": 0.00104,
+          "atr_pct": 0.3,
+          "vol_ratio": 0.75,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 49.76,
-          "rsi_prev1": 56.1,
-          "rsi_prev2": 53.8,
-          "rsi_direction": "DROPPING",
+          "rsi": 45.99,
+          "rsi_prev1": 48.53,
+          "rsi_prev2": 56.09,
+          "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
-          "atr": 0.002566,
-          "atr_pct": 0.73,
-          "vol_ratio": 1.18,
+          "atr": 0.002491,
+          "atr_pct": 0.71,
+          "vol_ratio": 0.73,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 39.35,
+          "rsi": 38.1,
           "rsi_prev1": 40.41,
           "rsi_prev2": 42.52,
           "rsi_direction": "FALLING",
           "ema_stack": "BEARISH",
-          "atr": 0.006694,
-          "atr_pct": 1.89,
-          "vol_ratio": 0.55,
+          "atr": 0.006777,
+          "atr_pct": 1.92,
+          "vol_ratio": 0.92,
           "state": "EXITING_LOW",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 44.11,
+          "rsi": 43.57,
           "rsi_prev1": 41.87,
           "rsi_prev2": 45.13,
           "rsi_direction": "RISING",
           "ema_stack": "MIXED",
           "atr": 0.02185,
-          "atr_pct": 6.18,
-          "vol_ratio": 0.46,
+          "atr_pct": 6.2,
+          "vol_ratio": 0.5,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 47.3,
+          "rsi": 47.15,
           "rsi_prev1": 49.62,
           "rsi_prev2": 53.19,
           "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
           "atr": 0.070331,
-          "atr_pct": 19.89,
-          "vol_ratio": 0.1,
+          "atr_pct": 19.97,
+          "vol_ratio": 0.11,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1406,28 +1406,28 @@
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 58.63,
-          "rsi_prev1": 60.69,
-          "rsi_prev2": 58.81,
-          "rsi_direction": "FALLING",
+          "rsi": 56.67,
+          "rsi_prev1": 60.36,
+          "rsi_prev2": 60.83,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.186844,
+          "atr": 0.179448,
           "atr_pct": 0.07,
-          "vol_ratio": 0.06,
+          "vol_ratio": 0.84,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 60.22,
-          "rsi_prev1": 61.69,
-          "rsi_prev2": 60.8,
+          "rsi": 60.04,
+          "rsi_prev1": 61.8,
+          "rsi_prev2": 61.69,
           "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 0.579641,
-          "atr_pct": 0.21,
-          "vol_ratio": 0.13,
+          "atr": 0.560381,
+          "atr_pct": 0.2,
+          "vol_ratio": 0.39,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
           "rsi": 54.71,
@@ -1435,11 +1435,11 @@
           "rsi_prev2": 53.78,
           "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
-          "atr": 2.029743,
+          "atr": 2.0376,
           "atr_pct": 0.74,
-          "vol_ratio": 0.04,
+          "vol_ratio": 0.06,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
           "rsi": 67.62,
@@ -1451,7 +1451,7 @@
           "atr_pct": 2.72,
           "vol_ratio": 0.08,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
           "rsi": 60.89,
@@ -1463,7 +1463,7 @@
           "atr_pct": 7.25,
           "vol_ratio": 0.36,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1492,47 +1492,47 @@
       "symbol": "xyz:AAPL",
       "name": "Apple",
       "image": "https://app.hyperliquid.xyz/coins/xyz:AAPL.svg",
-      "price": 311.83,
+      "price": 311.98,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 50.37,
-          "rsi_prev1": 46.37,
-          "rsi_prev2": 41.34,
-          "rsi_direction": "CLIMBING",
-          "ema_stack": "BEARISH",
-          "atr": 0.158913,
-          "atr_pct": 0.05,
-          "vol_ratio": 0.02,
+          "rsi": 55.92,
+          "rsi_prev1": 57.59,
+          "rsi_prev2": 55.97,
+          "rsi_direction": "FALLING",
+          "ema_stack": "MIXED",
+          "atr": 0.176464,
+          "atr_pct": 0.06,
+          "vol_ratio": 0.09,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 44.61,
-          "rsi_prev1": 41.74,
+          "rsi": 47.35,
+          "rsi_prev1": 45.33,
           "rsi_prev2": 41.74,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
-          "atr": 0.534202,
+          "atr": 0.52033,
           "atr_pct": 0.17,
-          "vol_ratio": 5.05,
+          "vol_ratio": 0.54,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 50.29,
+          "rsi": 50.89,
           "rsi_prev1": 49.67,
           "rsi_prev2": 50.45,
           "rsi_direction": "RISING",
           "ema_stack": "MIXED",
-          "atr": 2.087601,
+          "atr": 2.101173,
           "atr_pct": 0.67,
-          "vol_ratio": 0.24,
+          "vol_ratio": 0.27,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 45.13,
+          "rsi": 45.25,
           "rsi_prev1": 46.1,
           "rsi_prev2": 45.64,
           "rsi_direction": "FALLING",
@@ -1541,10 +1541,10 @@
           "atr_pct": 2.48,
           "vol_ratio": 0.07,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 56.02,
+          "rsi": 56.09,
           "rsi_prev1": 56.31,
           "rsi_prev2": 70.05,
           "rsi_direction": "FALLING",
@@ -1553,7 +1553,7 @@
           "atr_pct": 5.63,
           "vol_ratio": 0.6,
           "state": "EXITING_HIGH",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1582,47 +1582,47 @@
       "symbol": "xyz:NVDA",
       "name": "Nvidia",
       "image": "https://app.hyperliquid.xyz/coins/xyz:NVDA.svg",
-      "price": 224.62,
+      "price": 224.42,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 60.06,
-          "rsi_prev1": 59.01,
-          "rsi_prev2": 59.74,
-          "rsi_direction": "RISING",
+          "rsi": 52.17,
+          "rsi_prev1": 52.87,
+          "rsi_prev2": 51.03,
+          "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 0.199904,
-          "atr_pct": 0.09,
-          "vol_ratio": 0.29,
+          "atr": 0.184182,
+          "atr_pct": 0.08,
+          "vol_ratio": 0.18,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 65.94,
-          "rsi_prev1": 65.94,
-          "rsi_prev2": 64.62,
-          "rsi_direction": "FLAT",
+          "rsi": 62.22,
+          "rsi_prev1": 64.46,
+          "rsi_prev2": 65.94,
+          "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 0.529527,
-          "atr_pct": 0.24,
-          "vol_ratio": 0.33,
+          "atr": 0.508132,
+          "atr_pct": 0.23,
+          "vol_ratio": 0.38,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 73.42,
+          "rsi": 72.78,
           "rsi_prev1": 73.12,
           "rsi_prev2": 72.45,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
           "atr": 1.934725,
           "atr_pct": 0.86,
-          "vol_ratio": 0.04,
+          "vol_ratio": 0.06,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 67.18,
+          "rsi": 67.05,
           "rsi_prev1": 66.66,
           "rsi_prev2": 63.76,
           "rsi_direction": "RISING",
@@ -1631,19 +1631,19 @@
           "atr_pct": 2.86,
           "vol_ratio": 0.07,
           "state": "HIGH_ZONE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 58.94,
+          "rsi": 58.88,
           "rsi_prev1": 57.62,
           "rsi_prev2": 45.33,
           "rsi_direction": "RISING",
           "ema_stack": null,
           "atr": 17.726669,
-          "atr_pct": 7.89,
+          "atr_pct": 7.9,
           "vol_ratio": 0.38,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1676,28 +1676,28 @@
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 65.89,
-          "rsi_prev1": 63.99,
-          "rsi_prev2": 68.66,
-          "rsi_direction": "RISING",
+          "rsi": 61.7,
+          "rsi_prev1": 64.79,
+          "rsi_prev2": 60.96,
+          "rsi_direction": "DROPPING",
           "ema_stack": "BULLISH",
-          "atr": 0.413451,
+          "atr": 0.436256,
           "atr_pct": 0.09,
-          "vol_ratio": 1.2,
+          "vol_ratio": 0.5,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 55.45,
-          "rsi_prev1": 55.5,
-          "rsi_prev2": 55.27,
-          "rsi_direction": "FLAT",
+          "rsi": 55.19,
+          "rsi_prev1": 53.46,
+          "rsi_prev2": 55.5,
+          "rsi_direction": "RISING",
           "ema_stack": "MIXED",
-          "atr": 1.674389,
-          "atr_pct": 0.35,
-          "vol_ratio": 0.37,
+          "atr": 1.630605,
+          "atr_pct": 0.34,
+          "vol_ratio": 0.21,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
           "rsi": 49.29,
@@ -1705,11 +1705,11 @@
           "rsi_prev2": 47.38,
           "rsi_direction": "FLAT",
           "ema_stack": "BEARISH",
-          "atr": 8.367596,
+          "atr": 8.38331,
           "atr_pct": 1.73,
-          "vol_ratio": 0.01,
+          "vol_ratio": 0.02,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
           "rsi": 46.72,
@@ -1717,11 +1717,11 @@
           "rsi_prev2": 48.15,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
-          "atr": 33.4928,
+          "atr": 33.504228,
           "atr_pct": 6.92,
           "vol_ratio": 0.03,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
           "rsi": 58.48,
@@ -1733,7 +1733,7 @@
           "atr_pct": 14.01,
           "vol_ratio": 0.37,
           "state": "EXITING_HIGH",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1762,47 +1762,47 @@
       "symbol": "xyz:GOLD",
       "name": "Gold",
       "image": "https://app.hyperliquid.xyz/coins/xyz:GOLD.svg",
-      "price": 4348.6,
+      "price": 4348.3,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 58.74,
-          "rsi_prev1": 56.6,
-          "rsi_prev2": 53.83,
-          "rsi_direction": "RISING",
+          "rsi": 56.15,
+          "rsi_prev1": 56.15,
+          "rsi_prev2": 56.15,
+          "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
-          "atr": 0.92574,
+          "atr": 0.889628,
           "atr_pct": 0.02,
-          "vol_ratio": 1.4,
+          "vol_ratio": 0.49,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 59.82,
-          "rsi_prev1": 58.62,
+          "rsi": 59.56,
+          "rsi_prev1": 59.36,
           "rsi_prev2": 58.62,
-          "rsi_direction": "RISING",
+          "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
-          "atr": 5.749906,
-          "atr_pct": 0.13,
-          "vol_ratio": 0.72,
+          "atr": 5.424401,
+          "atr_pct": 0.12,
+          "vol_ratio": 0.46,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 77.16,
+          "rsi": 77.12,
           "rsi_prev1": 76.98,
           "rsi_prev2": 78.78,
           "rsi_direction": "FLAT",
           "ema_stack": "BULLISH",
-          "atr": 24.098803,
+          "atr": 24.105945,
           "atr_pct": 0.55,
-          "vol_ratio": 0.03,
+          "vol_ratio": 0.06,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 68.12,
+          "rsi": 68.09,
           "rsi_prev1": 69.03,
           "rsi_prev2": 63.32,
           "rsi_direction": "FALLING",
@@ -1811,10 +1811,10 @@
           "atr_pct": 1.72,
           "vol_ratio": 0.33,
           "state": "HIGH_ZONE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 50.13,
+          "rsi": 50.12,
           "rsi_prev1": 48.26,
           "rsi_prev2": 42.93,
           "rsi_direction": "RISING",
@@ -1823,7 +1823,7 @@
           "atr_pct": 6.62,
           "vol_ratio": 0.98,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1852,56 +1852,56 @@
       "symbol": "xyz:BRENTOIL",
       "name": "Brent Oil",
       "image": "https://app.hyperliquid.xyz/coins/xyz:BRENTOIL.svg",
-      "price": 82.099,
+      "price": 82.262,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 44.35,
-          "rsi_prev1": 48.79,
-          "rsi_prev2": 57.58,
-          "rsi_direction": "DROPPING",
+          "rsi": 50.49,
+          "rsi_prev1": 49.12,
+          "rsi_prev2": 53.68,
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.188042,
-          "atr_pct": 0.23,
-          "vol_ratio": 0.47,
+          "atr": 0.195632,
+          "atr_pct": 0.24,
+          "vol_ratio": 0.58,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 50.91,
-          "rsi_prev1": 57,
-          "rsi_prev2": 58.71,
-          "rsi_direction": "DROPPING",
+          "rsi": 54.51,
+          "rsi_prev1": 55.25,
+          "rsi_prev2": 57,
+          "rsi_direction": "FALLING",
           "ema_stack": "BULLISH",
-          "atr": 0.396084,
+          "atr": 0.397435,
           "atr_pct": 0.48,
-          "vol_ratio": 0.84,
+          "vol_ratio": 0.8,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 50.04,
+          "rsi": 51.01,
           "rsi_prev1": 52.03,
           "rsi_prev2": 48.41,
           "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
           "atr": 1.21929,
-          "atr_pct": 1.49,
-          "vol_ratio": 0.09,
+          "atr_pct": 1.48,
+          "vol_ratio": 0.16,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 46,
+          "rsi": 46.31,
           "rsi_prev1": 45.09,
           "rsi_prev2": 47.46,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 3.85658,
-          "atr_pct": 4.7,
-          "vol_ratio": 0.15,
+          "atr_pct": 4.69,
+          "vol_ratio": 0.16,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
           "rsi": null,
@@ -1913,7 +1913,7 @@
           "atr_pct": null,
           "vol_ratio": null,
           "state": "UNSUPPORTED",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -1942,68 +1942,68 @@
       "symbol": "xyz:CL",
       "name": "WTI Crude",
       "image": "https://app.hyperliquid.xyz/coins/xyz:CL.svg",
-      "price": 77.051,
+      "price": 77.28,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 44.41,
-          "rsi_prev1": 47.32,
-          "rsi_prev2": 55.2,
-          "rsi_direction": "FALLING",
+          "rsi": 53.15,
+          "rsi_prev1": 50.62,
+          "rsi_prev2": 53.29,
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.186974,
-          "atr_pct": 0.24,
-          "vol_ratio": 1.2,
+          "atr": 0.194249,
+          "atr_pct": 0.25,
+          "vol_ratio": 1.15,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 50.66,
-          "rsi_prev1": 55.83,
-          "rsi_prev2": 57.46,
-          "rsi_direction": "DROPPING",
+          "rsi": 55.99,
+          "rsi_prev1": 54.21,
+          "rsi_prev2": 55.83,
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.386148,
+          "atr": 0.385566,
           "atr_pct": 0.5,
-          "vol_ratio": 1.2,
+          "vol_ratio": 0.65,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 47.42,
+          "rsi": 48.84,
           "rsi_prev1": 49.13,
           "rsi_prev2": 45.27,
           "rsi_direction": "FALLING",
           "ema_stack": "BEARISH",
-          "atr": 1.187734,
+          "atr": 1.190019,
           "atr_pct": 1.54,
-          "vol_ratio": 0.06,
+          "vol_ratio": 0.09,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 43.56,
+          "rsi": 44.03,
           "rsi_prev1": 42.78,
           "rsi_prev2": 44.76,
           "rsi_direction": "RISING",
           "ema_stack": "BEARISH",
           "atr": 3.816851,
-          "atr_pct": 4.95,
+          "atr_pct": 4.94,
           "vol_ratio": 0.1,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 50.55,
+          "rsi": 50.69,
           "rsi_prev1": 49.19,
           "rsi_prev2": 55.25,
           "rsi_direction": "RISING",
           "ema_stack": null,
           "atr": 11.806692,
-          "atr_pct": 15.32,
+          "atr_pct": 15.28,
           "vol_ratio": 0.27,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
@@ -2032,68 +2032,68 @@
       "symbol": "xyz:SILVER",
       "name": "Silver",
       "image": "https://app.hyperliquid.xyz/coins/xyz:SILVER.svg",
-      "price": 63.753,
+      "price": 63.814,
       "supported": true,
       "ta": {
         "15m": {
-          "rsi": 36.99,
-          "rsi_prev1": 41.17,
-          "rsi_prev2": 42.12,
-          "rsi_direction": "DROPPING",
-          "ema_stack": "BEARISH",
-          "atr": 0.020908,
+          "rsi": 58.14,
+          "rsi_prev1": 58.14,
+          "rsi_prev2": 58.89,
+          "rsi_direction": "FLAT",
+          "ema_stack": "MIXED",
+          "atr": 0.021979,
           "atr_pct": 0.03,
-          "vol_ratio": 0.52,
+          "vol_ratio": 0.3,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1h": {
-          "rsi": 52.58,
-          "rsi_prev1": 54.73,
-          "rsi_prev2": 53.83,
-          "rsi_direction": "FALLING",
+          "rsi": 55.56,
+          "rsi_prev1": 53.87,
+          "rsi_prev2": 54.73,
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.134673,
-          "atr_pct": 0.21,
-          "vol_ratio": 0.5,
+          "atr": 0.129033,
+          "atr_pct": 0.2,
+          "vol_ratio": 0.25,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "4h": {
-          "rsi": 67.86,
+          "rsi": 68.5,
           "rsi_prev1": 68.19,
           "rsi_prev2": 68.69,
-          "rsi_direction": "FALLING",
+          "rsi_direction": "RISING",
           "ema_stack": "BULLISH",
-          "atr": 0.615853,
+          "atr": 0.618781,
           "atr_pct": 0.97,
-          "vol_ratio": 0.03,
+          "vol_ratio": 0.04,
           "state": "CONFIRMED_BULL",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1d": {
-          "rsi": 64.48,
+          "rsi": 64.76,
           "rsi_prev1": 65.23,
           "rsi_prev2": 59.3,
           "rsi_direction": "FALLING",
           "ema_stack": "MIXED",
-          "atr": 2.026717,
+          "atr": 2.027288,
           "atr_pct": 3.18,
           "vol_ratio": 0.09,
           "state": "HIGH_ZONE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         },
         "1w": {
-          "rsi": 47.57,
+          "rsi": 47.61,
           "rsi_prev1": 46.48,
           "rsi_prev2": 43.57,
           "rsi_direction": "RISING",
           "ema_stack": null,
           "atr": 10.072289,
-          "atr_pct": 15.8,
+          "atr_pct": 15.78,
           "vol_ratio": 0.29,
           "state": "RANGE",
-          "computed_at": "2026-08-08T21:41:37.276Z"
+          "computed_at": "2026-08-08T22:42:23.666Z"
         }
       },
       "badges": {
